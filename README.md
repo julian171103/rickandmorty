@@ -80,4 +80,4 @@ Rick and Morty characters, names and images belong to their respective owners (A
 
 ## Author
 
-Your name here
+Julián Guevara
