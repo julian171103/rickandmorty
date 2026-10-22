@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="rickandmorty.css">
+</head>
+<body>
+
+  <!-- Search bar (stays at the top) -->
+  <header class="top-bar">
+    <h1>Rick and Morty</h1>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Buscar personaje...">
+      <button type="submit" id="search-button">Buscar</button>
+    </form>
+
+    <!-- Tabs: each one uses a different endpoint -->
+    <nav class="tabs">
+      <button class="tab active" data-type="character">Personajes</button>
+      <button class="tab" data-type="location">Ubicaciones</button>
+      <button class="tab" data-type="episode">Episodios</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Messages: loading, no results, errors -->
+    <p id="message">Cargando...</p>
+
+    <!-- JavaScript puts the cards here -->
+    <section id="cards" class="cards"></section>
+  </main>
+
+  <!-- Pop up that opens when you click a card -->
+  <dialog id="popup">
+    <button id="close-button">X</button>
+    <img id="popup-image" src="" alt="">
+    <h2 id="popup-name"></h2>
+    <p id="popup-description"></p>
+
+    <!-- Related data, loaded with the nested requests -->
+    <h3 id="popup-extra-title">Datos relacionados</h3>
+    <ul id="popup-extra"></ul>
+    <button id="back-button">← Regresar</button>
+  </dialog>
+
+  <script src="rickandmorty.js"></script>
+</body>
+</html>
